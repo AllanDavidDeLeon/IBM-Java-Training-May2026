@@ -24,6 +24,21 @@ public class blackjack {
 		}
 	}
 	
+	enum Day { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
+
+	public static void dayOfWeekPattern(Day day) {
+	    switch (day) {
+	        case Monday -> System.out.println("Monday");
+	        case Tuesday -> System.out.println("Tuesday");
+	        case Wednesday -> System.out.println("Wednesday");
+	        case Thursday -> System.out.println("Thursday");
+	        case Friday -> System.out.println("Friday");
+	        case Saturday -> System.out.println("Saturday");
+	        case Sunday -> System.out.println("Sunday");
+	        default -> System.out.println("Invalid day");
+	    }
+	}
+	
 	public static void pyramid(int a) {
 		for (int i = 0; i <= a; i++) {
 			for (int j = 1; j <= i; j++) {
@@ -45,6 +60,9 @@ public class blackjack {
 		int numDay = sc.nextInt();
 		
 		dayOfWeek(numDay);
+		
+		Day day = Day.Monday;
+		dayOfWeekPattern(day);
 		
 		int num = 0;
 		while (num > 20 || num < 1) {
