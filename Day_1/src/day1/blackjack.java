@@ -48,6 +48,39 @@ public class blackjack {
 		}
 	}
 	
+	public static void pyramidWhile(int a) {
+	    int i = 0, j;
+
+	    while (i <= a) {
+	        j = 1;
+
+	        while (j <= i) {
+	            System.out.print(j + " ");
+	            j++;
+	        }
+
+	        System.out.println();
+	        i++;
+	    }
+	}
+	
+	public static void pyramidDoWhile(int a) {
+	    int i = 0, j;
+
+	    do {
+	        j = 1;
+
+	        do {
+	            System.out.print(j + " ");
+	            j++;
+	        } while (j <= i);
+
+	        System.out.println();
+	        i++;
+
+	    } while (i <= a);
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -71,11 +104,20 @@ public class blackjack {
 		}
 		pyramid(num);
 			
+		num = 0;
+		while (num > 20 || num < 1) {
+			System.out.print("Enter a number for pyramid: ");
+			num = sc.nextInt();
+		}
+		pyramidWhile(num);
+		
 		do {
 			System.out.print("Enter a number for pyramid: ");
 			num = sc.nextInt();
 		} while (num > 20 || num < 1);
-		pyramid(num);
+		pyramidDoWhile(num);
+		
+
 		
 		sc.close();
 	
