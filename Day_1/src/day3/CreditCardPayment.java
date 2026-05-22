@@ -11,7 +11,7 @@ public class CreditCardPayment extends Payment implements Verifiable{
 
 	@Override
 	public boolean verify() {
-		return cardNumber.length() == 16 ? true : false;
+		return cardNumber.length() == 16;
 	}
 
 	@Override
