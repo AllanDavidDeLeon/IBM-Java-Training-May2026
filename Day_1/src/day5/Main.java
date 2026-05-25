@@ -49,11 +49,8 @@ public class Main {
                 logCount.computeIfPresent("TOTAL", (k, v) -> v + 1);  
             }
             
-            LocalDateTime early = Collections.min(dates);
-            LocalDateTime late = Collections.max(dates);
-            
-            String earliest = early.format(formatter);
-            String latest = late.format(formatter);
+            String earliest = Collections.min(dates).format(formatter);
+            String latest = Collections.max(dates).format(formatter);
             
             System.out.println("INFO: " + logCount.get("INFO"));
             System.out.println("WARN: " + logCount.get("WARN"));
