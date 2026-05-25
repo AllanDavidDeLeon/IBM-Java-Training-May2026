@@ -14,6 +14,7 @@ public class StudentFile {
 		) {
 			String line;
 			boolean first = true;
+			
 			br.readLine();
 			bw.write("[");
 			bw.newLine();
