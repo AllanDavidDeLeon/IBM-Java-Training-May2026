@@ -86,11 +86,7 @@ public class Main {
        }
        
        
-       
-
        employees.sort((a,b) -> Double.compare(b.getSalary(), a.getSalary()));
-       
-       
        System.out.println("======= Sorted Salaries ========");
        Set<Double> sortedSalaries = new HashSet<>();
        
@@ -100,8 +96,6 @@ public class Main {
        }
        
        System.out.println("======= Unique Salaries ========");
-
-       
        Set<Double> uniqueSalaries = new TreeSet<>();
        
        for (Employee e : employees) {
