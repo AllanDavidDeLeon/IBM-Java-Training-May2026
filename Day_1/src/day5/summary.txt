@@ -1,47 +1,20 @@
 Log Summary Report
 --------------------
-Total Entries: 100
-INFO: 29
-WARN: 35
-ERROR: 36
+Total Entries: 87
+INFO: 68
+WARN: 10
+ERROR: 9
 
 Error Messages:
-- Payment processing failed
-- Payment processing failed
-- Unhandled exception occurred
-- Timeout while contacting external service
-- Payment processing failed
-- Database connection failed
-- Unhandled exception occurred
-- Database connection failed
-- Payment processing failed
-- Unhandled exception occurred
-- Payment processing failed
-- Database connection failed
-- Database connection failed
-- Database connection failed
-- Unhandled exception occurred
-- Timeout while contacting external service
-- Timeout while contacting external service
-- Timeout while contacting external service
-- Database connection failed
-- Payment processing failed
-- Payment processing failed
-- Payment processing failed
-- Payment processing failed
-- Timeout while contacting external service
-- Unhandled exception occurred
-- Payment processing failed
-- Unhandled exception occurred
-- Timeout while contacting external service
-- Payment processing failed
-- Database connection failed
-- Payment processing failed
-- Database connection failed
-- Database connection failed
-- Timeout while contacting external service
-- Database connection failed
-- Timeout while contacting external service
+- Failed to connect to external API
+- NullPointerException in UserService.java line 87
+- Timeout while reading data from database
+- FileNotFoundException in ConfigLoader.java line 45
+- Unauthorized access attempt detected
+- Assertion failed in TestCase #45
+- Unable to parse JSON response from API
+- SMTP server not responding
+- Audit log write failure
 
-Earliest Timestamp: 2024-05-10 14:28:11
-Latest Timestamp:   2024-05-11 13:55:43
+Earliest Timestamp: 2024-05-10 09:00:00
+Latest Timestamp:   2024-05-10 09:04:18
