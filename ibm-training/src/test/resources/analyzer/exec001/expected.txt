@@ -1,12 +1,11 @@
 Log Summary Report
 ------------------
 Total Entries: 4
-INFO: 3
+INFO: 4
 WARN: 0
-ERROR: 1
+ERROR: 0
 
 Error Messages:
-- Unauthorized access attempt detected
 
 Earliest Timestamp: 2024-05-10T09:01:54
-Latest Timestamp: 2024-05-10T09:02:03
+Latest Timestamp: 2024-05-10T09:02:06
