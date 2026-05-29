@@ -35,23 +35,15 @@ class LogAnalyzerTest {
 
 	    String[] args = {"src/resources/test1/server.log"};
 
-	    Path expected =
-	            Path.of("src/resources/test1/expected.txt");
+	    Path expected = Path.of("src/resources/test1/expected.txt");
 
-	    String contentExpected =
-	            Files.readString(expected, StandardCharsets.UTF_8)
-	                    .replace("\r\n", "\n")
-	                    .replace("\r", "");
+	    String contentExpected =Files.readString(expected, StandardCharsets.UTF_8).replace("\r\n", "\n").replace("\r", "");
 
 	    LogAnalyzer.main(args);
 
-	    Path actual =
-	            Path.of("src/resources/summary.txt");
+	    Path actual = Path.of("src/resources/summary.txt");
 
-	    String contentActual =
-	            Files.readString(actual, StandardCharsets.UTF_8)
-	                    .replace("\r\n", "\n")
-	                    .replace("\r", "");
+	    String contentActual = Files.readString(actual, StandardCharsets.UTF_8).replace("\r\n", "\n").replace("\r", "");
 
 	    assertEquals(contentExpected, contentActual);
 	}
@@ -62,23 +54,15 @@ class LogAnalyzerTest {
 
 	    String[] args = {"src/resources/test2/server.log"};
 
-	    Path expected =
-	            Path.of("src/resources/test2/expected.txt");
+	    Path expected = Path.of("src/resources/test2/expected.txt");
 
-	    String contentExpected =
-	            Files.readString(expected, StandardCharsets.UTF_8)
-	                    .replace("\r\n", "\n")
-	                    .replace("\r", "");
+	    String contentExpected = Files.readString(expected, StandardCharsets.UTF_8).replace("\r\n", "\n").replace("\r", "");
 
 	    LogAnalyzer.main(args);
 
-	    Path actual =
-	            Path.of("src/resources/summary.txt");
+	    Path actual = Path.of("src/resources/summary.txt");
 
-	    String contentActual =
-	            Files.readString(actual, StandardCharsets.UTF_8)
-	                    .replace("\r\n", "\n")
-	                    .replace("\r", "");
+	    String contentActual = Files.readString(actual, StandardCharsets.UTF_8).replace("\r\n", "\n").replace("\r", "");
 
 	    assertEquals(contentExpected, contentActual);
 	}
@@ -89,23 +73,15 @@ class LogAnalyzerTest {
 
 	    String[] args = {"src/resources/test3/server.log"};
 
-	    Path expected =
-	            Path.of("src/resources/test3/expected.txt");
+	    Path expected = Path.of("src/resources/test3/expected.txt");
 
-	    String contentExpected =
-	            Files.readString(expected, StandardCharsets.UTF_8)
-	                    .replace("\r\n", "\n")
-	                    .replace("\r", "");
+	    String contentExpected = Files.readString(expected, StandardCharsets.UTF_8).replace("\r\n", "\n").replace("\r", "");
 
 	    LogAnalyzer.main(args);
 
-	    Path actual =
-	            Path.of("src/resources/summary.txt");
+	    Path actual = Path.of("src/resources/summary.txt");
 
-	    String contentActual =
-	            Files.readString(actual, StandardCharsets.UTF_8)
-	                    .replace("\r\n", "\n")
-	                    .replace("\r", "");
+	    String contentActual = Files.readString(actual, StandardCharsets.UTF_8).replace("\r\n", "\n").replace("\r", "");
 
 	    assertEquals(contentExpected, contentActual);
 	}
@@ -179,7 +155,7 @@ class LogAnalyzerTest {
 	        Path bad = Path.of("src/resources/summary.txt");
 	        
 	        Files.delete(bad);
-	            
+	        
 	        Files.createDirectory(bad); 
 
 	        ByteArrayOutputStream out = new ByteArrayOutputStream();
