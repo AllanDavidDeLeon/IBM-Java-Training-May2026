@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html xmlns:h="jakarta.faces.html" xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Create Details</title>
+        <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css" />
+    </h:head>
+    <h:body>
+        <h2>Create Details</h2>
+        <h:form>
+            <div class="ui-fluid">
+               <div class="field">
+                   <h:outputText for="title-input" value="Title" />
+                   <p:inputText id="title-input" value="#{reportNewBean.title}" />
+                   <h:message for="title-input" style="color: red" /> 
+               </div>
+               <div class="field">
+                   <h:outputText for="detail-input" value="Details" />
+                   <p:inputTextarea id="detail-input" value="#{reportNewBean.detail}" rows="6" />
+               </div>
+           </div>
+           <div class="flex justify-content-end">
+               <p:commandButton value="Submit" ajax="false" action="#{reportNewBean.create()}" />
+           </div>
+        </h:form>
+        <div>
+            Title：<h:outputText value="#{reportNewBean.title}" />
+        </div>
+        <div>
+            Details：<h:outputText value="#{reportNewBean.detail}" style="white-space: pre-wrap;"/>
+        </div>
+    </h:body>
+</html>

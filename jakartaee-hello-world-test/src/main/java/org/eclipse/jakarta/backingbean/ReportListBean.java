@@ -1,0 +1,48 @@
+package org.eclipse.jakarta.backingbean;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.jakarta.dto.ReportDto;
+import org.eclipse.jakarta.infrastracture.repository.ReportRepository;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+
+@Named
+@RequestScoped
+public class ReportListBean {
+	
+    private List<ReportDto> reports;
+
+    @Inject
+    private ReportRepository reportRepository;
+
+    @PostConstruct
+    public void init() {
+        reports = reportRepository.findAll();
+    }
+    
+    public List<ReportDto> getReports() {
+        return reports;
+    }
+
+    public void setReports(List<ReportDto> reports) {
+        this.reports = reports;
+    }
+    
+    public String view(ReportDto report) {
+        return "/reportView.xhtml?faces-redirect=true&id=" + report.getId();
+    }
+    
+    public String edit(ReportDto report) {
+        return "/reportUpdate.xhtml?faces-redirect=true&id=" + report.getId();
+    }
+    
+    public void delete(ReportDto report) {
+        reportRepository.delete(report.getId());
+        reports = reportRepository.findAll();
+    }
+}

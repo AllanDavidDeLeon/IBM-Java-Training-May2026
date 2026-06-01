@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:h="jakarta.faces.html" xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Update Details</title>
+        <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css" />
+    </h:head>
+    <h:body>
+        <h2>Update Details</h2>
+        <h:form>
+            <h:inputHidden value="#{reportUpdateBean.id}" />
+            <div class="ui-fluid">
+                <div class="field">
+                    <h:outputText for="title-input" value="Title" />
+                    <p:inputText id="title-input" value="#{reportUpdateBean.title}" />
+                </div>
+                <div class="field">
+                    <h:outputText for="detail-input" value="Details" />
+                    <p:inputTextarea id="detail-input" 
+                                     value="#{reportUpdateBean.detail}" 
+                                     rows="6" />
+                </div>
+            </div>
+            <div class="flex justify-content-end">
+                <p:commandButton value="Save Changes" 
+                                 ajax="false" 
+                                 action="#{reportUpdateBean.update}" />
+            </div>
+        </h:form>
+    </h:body>
+</html>
