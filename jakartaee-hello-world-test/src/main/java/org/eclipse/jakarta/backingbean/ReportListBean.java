@@ -45,5 +45,4 @@ public class ReportListBean {
         reportRepository.delete(report.getId());
         reports = reportRepository.findAll();
     }
-    
 }
