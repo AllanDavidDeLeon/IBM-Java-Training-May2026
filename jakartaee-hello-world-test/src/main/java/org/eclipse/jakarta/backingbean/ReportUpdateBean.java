@@ -9,14 +9,11 @@ import jakarta.inject.Named;
 @Named
 @RequestScoped
 public class ReportUpdateBean {
-	
     private Long id;
     private String title;
     private String detail;
-    
     @Inject
     private ReportRepository reportRepository;
-    
     @PostConstruct
     public void init() {
         String idParam = FacesContext.getCurrentInstance()
@@ -35,37 +32,17 @@ public class ReportUpdateBean {
         }
     }
     public String update() {
-        for (ReportDto r : reportRepository.findAll()) {
-            if (r.getId().equals(id)) {
-                r.setTitle(title);
-                r.setDetail(detail);
-                break;
-            }
-        }
+        ReportDto updatedReport = new ReportDto();
+        updatedReport.setId(id);
+        updatedReport.setTitle(title);
+        updatedReport.setDetail(detail);
+        reportRepository.update(updatedReport);
         return "/reportList.xhtml?faces-redirect=true";
     }
-    
-    public Long getId() {
-        return id;
-    }
-    
-    public void setId(Long id) {
-        this.id = id;
-    }
-    
-    public String getTitle() {
-        return title;
-    }
-    
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    
-    public String getDetail() {
-        return detail;
-    }
-    
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
+    public String getDetail() { return detail; }
+    public void setDetail(String detail) { this.detail = detail; }
 }

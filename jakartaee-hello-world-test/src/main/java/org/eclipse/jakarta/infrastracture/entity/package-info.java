@@ -1,0 +1,1 @@
+package org.eclipse.jakarta.infrastracture.entity;
