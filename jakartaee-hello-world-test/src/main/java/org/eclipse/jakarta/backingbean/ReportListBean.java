@@ -33,6 +33,10 @@ public class ReportListBean {
         this.reports = reports;
     }
     
+    public void setReportRepository(ReportRepository reportRepository) {
+        this.reportRepository = reportRepository;
+    }
+    
     public String view(ReportDto report) {
         return "/reportView.xhtml?faces-redirect=true&id=" + report.getId();
     }
