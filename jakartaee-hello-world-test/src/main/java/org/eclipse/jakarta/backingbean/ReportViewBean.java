@@ -32,6 +32,7 @@ public class ReportViewBean {
             }
         }
     }
+    
     public ReportDto getReport() {
         return report;
     }
